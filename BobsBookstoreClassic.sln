@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution 
 		LogMonitorConfig.json = LogMonitorConfig.json
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookstore.Common", "Bookstore.Common\Bookstore.Common.csproj", "{ACEFD7D2-FCBF-4A58-8FB0-D90A00F44642}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookstore.Common", "app\Bookstore.Common\Bookstore.Common.csproj", "{ACEFD7D2-FCBF-4A58-8FB0-D90A00F44642}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
