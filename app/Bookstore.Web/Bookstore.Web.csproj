@@ -676,8 +676,8 @@
     <Content Include="Scripts\jquery\jquery.slim.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Bookstore.Common\Bookstore.Common.csproj">
-      <Project>{368f04e5-5093-4987-99a1-92bf5c8e8673}</Project>
+    <ProjectReference Include="..\..\Bookstore.Common\Bookstore.Common.csproj">
+      <Project>{acefd7d2-fcbf-4a58-8fb0-d90a00f44642}</Project>
       <Name>Bookstore.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\Bookstore.Data\Bookstore.Data.csproj">
