@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 namespace Bookstore.Web
 {
@@ -8,7 +9,13 @@ namespace Bookstore.Web
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            // Configure services here
+            services.AddLogging(builder =>
+            {
+                builder.AddConsole();
+                builder.AddDebug();
+            });
+
+            // Configure other services here
         }
 
         public void Configure(IApplicationBuilder app, IHostEnvironment env)
