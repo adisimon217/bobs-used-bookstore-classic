@@ -1,32 +1,27 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Configuration;
 
 namespace Bookstore.Web
 {
     public class Startup
     {
-        public IConfiguration Configuration { get; }
-
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
-
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
-            // Configure other services here
+            // Configure services here
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostEnvironment env)
         {
-            // Logging is automatically configured by the framework
+            LoggingSetup.ConfigureLogging();
 
-            // Use the Configuration property instead of ConfigurationSetup
-            // ConfigurationSetup.ConfigureConfiguration();
+            ConfigurationSetup.ConfigureConfiguration();
+
+            // Note: DependencyInjection should be configured in ConfigureServices method
+            // DependencyInjectionSetup.ConfigureDependencyInjection(app);
+
+            // Authentication configuration might need to be adjusted for ASP.NET Core
+            // AuthenticationConfig.ConfigureAuthentication(app);
 
             if (env.IsDevelopment())
             {
