@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace Bookstore.Web
 {
@@ -12,11 +11,9 @@ namespace Bookstore.Web
             // Configure services here
         }
 
-        public void Configure(IApplicationBuilder app, IHostEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostEnvironment env)
         {
-// Configure logging using the built-in ILoggerFactory
-            loggerFactory.AddConsole();
-            loggerFactory.AddDebug();
+            LoggingSetup.ConfigureLogging();
 
             ConfigurationSetup.ConfigureConfiguration();
 
